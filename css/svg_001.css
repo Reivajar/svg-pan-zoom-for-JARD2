@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+html			{	width: 100%;
+					height: 100%;
+				}
+
+body			{	overflow-y: hidden;
+					vertical-align: baseline;
+					margin: 0px;
+					width: 100%;
+					height: 100%;
+					min-height: 100%;
+					background-color:#000;
+				}
+
+object			{	width: 100%;
+					height: 100%;
+					vertical-align: baseline;
+					position: fixed;
+				}
+				
+svg				{	width: 100%;
+					height: 100%;
+					vertical-align: baseline;
+				}
+				
+
+#container		{	width: 100%;
+					height: 100%;
+					margin-left: auto;
+					margin-right: auto;
+					vertical-align: baseline;
+					position: fixed;
+					background-color:#000;
+				}
+				
+.svg-pan-zoom_viewport	{	width: 100%; height: 100%;	}
+				
+/*.svg-container  {	width: 100%;
+					height: auto;
+					margin-left: auto;
+					margin-right: auto;
+					vertical-align: baseline;
+					position: fixed;
+				}*/
+					
+
+#justus_coming_soon_banner_MENOS polygon, #justus_coming_soon_banner_MENOS path {/* stroke-width: 2px; */
+				stroke-dasharray: 3;
+				stroke-dashoffset: 5000;
+				}
+
+/* Polygons fills to make them more easible accesible and clickable */
+polygon {fill: #000; fill-opacity: 0;}
+
+/* Making responsible links lines */
+#escalera_recta_grande_LINKS, #escalera_recta_peq_LINKS, 
+#escalera_redonda_grande_LINKS line, #escalera_redonda_peq_LINKS,
+#montacargas_LINKS, #ascensor_xUNO_LINKS,
+#ascensor_xDOS_LINKS, #ascensor_xTRES_LINKS,
+#Misc_peq_LINKS, #Misc_med_LINKS,
+#Misc_grande_LINKS, #Deportivo_peq_LINKS,
+#Deportivo_med_LINKS, #Deportivo_grande_LINKS { opacity: 0;}
+
+/*#escalera_recta_grande_LINKS:hover { opacity: 1;}
+#escalera_recta_peq_LINKS:hover { opacity: 1;}
+#escalera_redonda_grande_LINKS:hover { opacity: 1;}
+#escalera_redonda_peq_LINKS:hover { opacity: 1;}*/
+
+/*, #escalera_recta_peq_CURVAS:hover, 
+#escalera_redonda_grande_CURVAS:hover, #escalera_redonda_peq_CURVAS:hover,
+#montacargas_CURVAS:hover, #ascensor_xUNO_CURVAS:hover,
+#ascensor_xDOS_CURVAS:hover, #ascensor_xTRES_CURVAS:hover,
+#Misc_peq_CURVAS:hover, #Misc_med_CURVAS:hover,
+#Misc_grande_CURVAS:hover, #Deportivo_peq_CURVAS:hover,
+#Deportivo_med_CURVAS:hover, #Deportivo_grande_CURVAS:hover { line:opacity: 1;} */
+
+
+/* Over mouse effects */
+polygon:hover 	{	
+					stroke-dasharray: 3;
+					stroke-width: 2px; 
+					transform: scale(1.01);
+					-webkit-transform: scale(1.01);
+					-ms-transform: scale(1.01);
+					transform-origin: 50% 50%;
+					-webkit-transform-origin: 50% 50%;
+					-ms-transform-origin: 50% 50%;
+				}
+path:hover 		{	
+					stroke-dasharray: 3; 
+					stroke-width: 2px; 
+					transform: scale(1.01);
+					-webkit-transform: scale(1.01);
+					-ms-transform: scale(1.01);
+					transform-origin: 50% 50%;
+					-webkit-transform-origin: 50% 50%;
+					-ms-transform-origin: 50% 50%;
+				}
+
+/* ANIMATION FADE IN-FADE OUT */
+/* Standard */
+@keyframes fadein {
+		0%, 10%  {opacity: 0.2}
+  		25%, 85% {opacity: 1}
+  		100%     {opacity: 0.2}
+}
+
+/* Chrome, Opera, Safari */
+@-webkit-keyframes fadein {
+		0%, 10%  {opacity: 0.2}
+  		25%, 85% {opacity: 1}
+  		100%     {opacity: 0.2}
+}
+
+/* IE */
+@-ms-keyframes fadein {
+		0%, 10%  {opacity: 0.2}
+  		25%, 85% {opacity: 1}
+  		100%     {opacity: 0.2}
+}
+
+
+/* ANIMATION VIBRATION */
+/* Standard */
+@keyframes vibration {
+		0%, 10%  {transform: scale(1)}
+		15%, 25% {transform: scale(1.1)}
+		30%, 55% {transform: scale(0.9)}
+  		65%, 85% {transform: scale(1.12)}
+  		100%     {transform: scale(1)}
+}
+		
+/* Chrome, Opera, Safari/ */
+@-webkit-keyframes vibration {
+		0%, 10%  {transform: scale(1)}
+		15%, 25% {transform: scale(1.1)}
+		30%, 55% {transform: scale(0.9)}
+  		65%, 85% {transform: scale(1.12)}
+  		100%     {transform: scale(1)}
+}
+
+/* IE */
+@-ms-keyframes vibration {
+		0%, 10%  {transform: scale(1)}
+		15%, 25% {transform: scale(1.1)}
+		30%, 55% {transform: scale(0.9)}
+  		65%, 85% {transform: scale(1.12)}
+  		100%     {transform: scale(1)} 
+}
+
+/* ANIMATION MOVING DASH */
+/* Standard */
+@keyframes dash {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+/* Chrome, Opera, Safari */
+@-webkit-keyframes dash {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+/* IE */
+@-webkit-keyframes dash {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+/* Animation setting for elements*/
+
+#justus_coming_soon_banner_MENOS polygon, #justus_coming_soon_banner_MENOS path {
+	transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
+	animation: fadein 2s ease infinite, /*vibration 0.15s ease infinite, */dash 5s ease infinite;
+	-webkit-animation: fadein 2s ease infinite, /*vibration 0.25s ease infinite, */dash 5s ease infinite;
+} 
+
+
+
+
+
+
